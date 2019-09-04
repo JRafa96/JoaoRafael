@@ -35,9 +35,8 @@ public class Director extends People {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return super.toString() + "\nProduction Compan: " +"\nFilmography: " + this.getFilmography();
+		return this.getClass().getSimpleName() + "\n" + super.toString() + "\nProduction Company: " + this.getProductionCompany()
+				+ "\nFilmography: " + this.getFilmography();
 	}
-	
-	
 
 }

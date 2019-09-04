@@ -35,7 +35,7 @@ public class Actor extends People {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return super.toString() + "\nOscar Nominations: " + this.getOscarNominations().toString() + "\nTipo de Actor: " + this.getTipoActor();
+		return this.getClass().getSimpleName() + "\n" + super.toString() + "\nOscar Nominations: " + this.getOscarNominations().toString() + "\nTipo de Actor: " + this.getTipoActor();
 	}
 
 }
