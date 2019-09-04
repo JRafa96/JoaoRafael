@@ -8,9 +8,14 @@ import Exercicio.People;
 public class Actor extends People {
 
 	private List<Integer> oscarNominations = new ArrayList<Integer>();
+	private TipoActor tipoActor; 
+	
+	public TipoActor getTipoActor() {
+		return tipoActor;
+	}
 
-	enum TipoActor {
-		MAIN, SUPPORTING, STUNTMAN
+	public void setTipoActor(TipoActor tipoActor) {
+		this.tipoActor = tipoActor;
 	}
 
 	public List<Integer> getOscarNominations() {
@@ -21,9 +26,16 @@ public class Actor extends People {
 		this.oscarNominations = oscarNominations;
 	}
 
-	public Actor(String name, String surname, int age, List<Integer> oscarNominations) {
+	public Actor(String name, String surname, int age,TipoActor tipoActor, List<Integer> oscarNominations) {
 		super(name, surname, age);
 		this.oscarNominations = oscarNominations;
+		this.tipoActor = tipoActor;
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString() + "\nOscar Nominations: " + this.getOscarNominations().toString() + "\nTipo de Actor: " + this.getTipoActor();
 	}
 
 }
